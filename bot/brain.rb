@@ -65,7 +65,7 @@ class Brain
       return
     end
 
-    job = Job.new(uri, redis)
+    job = Job.from_uri(uri, redis)
 
     # Is the job already known?
     if job.exists?
